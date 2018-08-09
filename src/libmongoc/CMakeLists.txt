@@ -863,7 +863,7 @@ if (MONGOC_ENABLE_STATIC)
 endif ()
 
 set (MONGOC_HEADER_INSTALL_DIR
-   "${CMAKE_INSTALL_INCLUDEDIR}/libmongoc-${MONGOC_API_VERSION}"
+   "${CMAKE_INSTALL_INCLUDEDIR}/libmongoc-${MONGOC_API_VERSION}/libmongoc"
 )
 
 install (
