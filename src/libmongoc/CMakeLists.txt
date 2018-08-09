@@ -363,13 +363,13 @@ if (NOT ENABLE_ICU STREQUAL OFF)
 endif()
 
 configure_file (
-   "${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-config.h.in"
-   "${PROJECT_BINARY_DIR}/src/mongoc/mongoc-config.h"
+   "${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-config.h.in"
+   "${PROJECT_BINARY_DIR}/src/mongoc/mongoc/mongoc-config.h"
 )
 
 configure_file (
-   "${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-version.h.in"
-   "${PROJECT_BINARY_DIR}/src/mongoc/mongoc-version.h"
+   "${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-version.h.in"
+   "${PROJECT_BINARY_DIR}/src/mongoc/mongoc/mongoc-version.h"
 )
 
 include_directories ("${PROJECT_BINARY_DIR}/src/mongoc")
@@ -377,145 +377,149 @@ include_directories ("${PROJECT_SOURCE_DIR}/src/mongoc")
 include_directories ("${PROJECT_SOURCE_DIR}/../../src/common")
 
 set (SOURCES ${SOURCES}
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-apm.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-array.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-async.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-async-cmd.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-buffer.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-bulk-operation.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-change-stream.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-client.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-client-pool.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cluster.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cluster-sasl.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-collection.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-compression.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-counters.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-array.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-cmd.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-cmd-deprecated.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-find.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-find-cmd.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-find-opquery.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-legacy.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor-array.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-database.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-error.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-find-and-modify.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-init.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file-list.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file-page.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file-list.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-handshake.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-host-list.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-index.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-init.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-list.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-linux-distro-scanner.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-log.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-matcher.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-matcher-op.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-memcmp.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cmd.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-opts.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-opts-helpers.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-queue.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-read-concern.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-read-prefs.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-rpc.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-server-description.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-server-stream.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-client-session.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-set.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-socket.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-buffered.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-buffered.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-file.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-gridfs.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-socket.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-topology.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-topology-description.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-topology-description-apm.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-topology-scanner.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-uri.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-util.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-version-functions.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-write-command.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-write-command-legacy.c
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-write-concern.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-apm.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-array.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-async.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-async-cmd.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-buffer.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-bulk-operation.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-change-stream.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-client.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-client-pool.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cluster.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cluster-sasl.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-collection.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-compression.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-counters.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-array.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-cmd.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-cmd-deprecated.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-find.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-find-cmd.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-find-opquery.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-legacy.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor-array.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-database.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-error.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-find-and-modify.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-init.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file-list.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file-page.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file-list.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-handshake.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-host-list.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-index.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-init.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-list.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-linux-distro-scanner.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-log.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-matcher.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-matcher-op.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-memcmp.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cmd.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-opts.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-opts-helpers.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-queue.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-read-concern.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-read-prefs.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-rpc.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-server-description.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-server-stream.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-client-session.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-set.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-socket.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-buffered.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-buffered.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-file.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-gridfs.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-socket.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-topology.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-topology-description.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-topology-description-apm.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-topology-scanner.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-uri.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-util.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-version-functions.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-write-command.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-write-command-legacy.c
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-write-concern.c
    ${PROJECT_SOURCE_DIR}/../../src/common/common-b64.c
    ${PROJECT_SOURCE_DIR}/../../src/common/common-md5.c
 )
 
 set (HEADERS
-   ${PROJECT_BINARY_DIR}/src/mongoc/mongoc-config.h
-   ${PROJECT_BINARY_DIR}/src/mongoc/mongoc-version.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-apm.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-bulk-operation.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-change-stream.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-client.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-client-pool.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-collection.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cursor.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-database.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-error.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-flags.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-find-and-modify.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file-page.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gridfs-file-list.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-handshake.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-host-list.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-init.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-index.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-iovec.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-log.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-macros.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-matcher.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-opcode.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-read-concern.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-read-prefs.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-server-description.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-client-session.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-socket.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-libressl.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-openssl.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-buffered.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-file.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-gridfs.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-socket.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-topology-description.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-uri.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-version-functions.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-write-concern.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-rand.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls.h
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-ssl.h
+   ${PROJECT_BINARY_DIR}/src/mongoc/mongoc/mongoc-config.h
+   ${PROJECT_BINARY_DIR}/src/mongoc/mongoc/mongoc-version.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-apm.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-bulk-operation.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-change-stream.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-client.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-client-pool.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-collection.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cursor.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-database.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-error.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-flags.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-find-and-modify.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file-page.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gridfs-file-list.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-handshake.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-host-list.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-init.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-index.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-iovec.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-log.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-macros.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-matcher.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-opcode.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-read-concern.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-read-prefs.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-server-description.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-client-session.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-socket.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-libressl.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-openssl.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-buffered.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-file.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-gridfs.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-socket.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-topology-description.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-uri.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-version-functions.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-write-concern.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-rand.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-ssl.h
+)
+
+set (HEADERS_FORWARDING
+   ${PROJECT_SOURCE_DIR}/src/mongoc/forwarding/mongoc.h
 )
 
 if (NOT ENABLE_SSL STREQUAL OFF)
    set (SOURCES ${SOURCES}
-      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-crypto.c
-      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-scram.c
-      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls.c
-      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-ssl.c
+      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-crypto.c
+      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-scram.c
+      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls.c
+      ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-ssl.c
    )
 
    if (OPENSSL_FOUND)
       message (STATUS "Compiling against OpenSSL")
       set (SOURCES ${SOURCES}
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-crypto-openssl.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-rand-openssl.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-openssl.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-openssl-bio.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-openssl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-crypto-openssl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-rand-openssl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-openssl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-openssl-bio.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-openssl.c
       )
       set (SSL_LIBRARIES ${OPENSSL_LIBRARIES})
       include_directories (${OPENSSL_INCLUDE_DIR})
@@ -525,28 +529,28 @@ if (NOT ENABLE_SSL STREQUAL OFF)
    elseif (SECURE_TRANSPORT)
       message (STATUS "Compiling against Secure Transport")
       set (SOURCES ${SOURCES}
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-crypto-common-crypto.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-rand-common-crypto.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-secure-transport.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-secure-transport.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-crypto-common-crypto.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-rand-common-crypto.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-secure-transport.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-secure-transport.c
       )
       set (SSL_LIBRARIES "-framework CoreFoundation -framework Security")
    elseif (SECURE_CHANNEL)
       message (STATUS "Compiling against Secure Channel")
       set (SOURCES ${SOURCES}
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-crypto-cng.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-rand-cng.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-secure-channel.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-secure-channel.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-crypto-cng.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-rand-cng.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-secure-channel.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-secure-channel.c
       )
       set (SSL_LIBRARIES secur32.lib crypt32.lib Bcrypt.lib)
    elseif (LIBRESSL)
       message (STATUS "Compiling against LibreSSL")
       set (SOURCES ${SOURCES}
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-crypto-openssl.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-rand-openssl.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-libressl.c
-         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-libressl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-crypto-openssl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-rand-openssl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-stream-tls-libressl.c
+         ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-libressl.c
       )
       set (SSL_LIBRARIES -ltls -lcrypto)
    endif ()
@@ -555,20 +559,20 @@ else ()
 endif () # ENABLE_SSL
 
 if (MONGOC_ENABLE_SASL)
-   set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-sasl.c)
+   set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-sasl.c)
    if (MONGOC_ENABLE_SASL_CYRUS)
       message (STATUS "Compiling against Cyrus SASL")
-      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cluster-cyrus.c)
-      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cyrus.c)
+      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cluster-cyrus.c)
+      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cyrus.c)
       include_directories (${SASL_INCLUDE_DIRS})
    elseif (MONGOC_ENABLE_SASL_SSPI)
       message (STATUS "Compiling against Windows SSPI")
-      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cluster-sspi.c)
-      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-sspi.c)
+      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cluster-sspi.c)
+      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-sspi.c)
       set (SASL_LIBRARIES secur32.lib crypt32.lib Shlwapi.lib)
    elseif (MONGOC_ENABLE_SASL_GSSAPI)
-      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-cluster-gssapi.c)
-      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-gssapi.c)
+      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-cluster-gssapi.c)
+      set (SOURCES ${SOURCES} ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-gssapi.c)
       if (APPLE)
          message (STATUS "Compiling against macOS GSS")
          set (LIBRARIES ${LIBRARIES} -framework GSS)
@@ -596,7 +600,7 @@ if (WIN32)
    set (LIBRARIES ${LIBRARIES} ws2_32)
 endif ()
 
-add_library (mongoc_shared SHARED ${SOURCES} ${HEADERS})
+add_library (mongoc_shared SHARED ${SOURCES} ${HEADERS} ${HEADERS_FORWARDING})
 set_target_properties (mongoc_shared PROPERTIES CMAKE_CXX_VISIBILITY_PRESET hidden)
 target_link_libraries (mongoc_shared ${LIBRARIES} ${BSON_LIBRARIES})
 target_include_directories (mongoc_shared BEFORE PUBLIC ${BSON_INCLUDE_DIRS} ${MONGOC_INTERNAL_INCLUDE_DIRS})
@@ -606,7 +610,7 @@ set_target_properties (mongoc_shared PROPERTIES VERSION 0.0.0 SOVERSION 0)
 set_target_properties (mongoc_shared PROPERTIES OUTPUT_NAME "mongoc-${MONGOC_API_VERSION}" PREFIX "lib")
 
 if (MONGOC_ENABLE_STATIC)
-   add_library (mongoc_static STATIC ${SOURCES} ${HEADERS})
+   add_library (mongoc_static STATIC ${SOURCES} ${HEADERS} ${HEADERS_FORWARDING})
    target_link_libraries (mongoc_static ${LIBRARIES} ${BSON_STATIC_LIBRARIES})
    target_include_directories (mongoc_static BEFORE PUBLIC ${BSON_STATIC_INCLUDE_DIRS} ${MONGOC_INTERNAL_INCLUDE_DIRS})
    target_compile_definitions (mongoc_static PUBLIC MONGOC_COMPILATION MONGOC_STATIC ${BSON_STATIC_DEFINITIONS})
@@ -868,6 +872,11 @@ set (MONGOC_HEADER_INSTALL_DIR
 
 install (
    FILES ${HEADERS}
+   DESTINATION "${MONGOC_HEADER_INSTALL_DIR}/mongoc"
+)
+
+install (
+   FILES ${HEADERS_FORWARDING}
    DESTINATION "${MONGOC_HEADER_INSTALL_DIR}"
 )
 

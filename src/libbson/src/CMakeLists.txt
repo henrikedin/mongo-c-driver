@@ -1,4 +1,4 @@
-add_subdirectory (bson)
+add_subdirectory (bson/bson)
 add_subdirectory (jsonsl)
 
 set_local_dist (src_libbson_src_DIST_local

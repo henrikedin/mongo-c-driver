@@ -15,9 +15,9 @@
  */
 
 
-#include <bson.h>
+#include <bson/bson.h>
 #define BSON_INSIDE
-#include "bson-thread-private.h"
+#include "bson/bson-thread-private.h"
 #undef BSON_INSIDE
 
 #ifdef BSON_HAVE_STRINGS_H

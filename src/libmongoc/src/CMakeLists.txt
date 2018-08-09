@@ -1,4 +1,4 @@
-add_subdirectory (mongoc)
+add_subdirectory (mongoc/mongoc)
 
 set_local_dist (src_libmongoc_src_DIST_local
    CMakeLists.txt

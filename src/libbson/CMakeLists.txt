@@ -127,13 +127,13 @@ endif ()
 include (CheckAtomics)
 
 configure_file (
-   "${PROJECT_SOURCE_DIR}/src/bson/bson-config.h.in"
-   "${PROJECT_BINARY_DIR}/src/bson/bson-config.h"
+   "${PROJECT_SOURCE_DIR}/src/bson/bson/bson-config.h.in"
+   "${PROJECT_BINARY_DIR}/src/bson/bson/bson-config.h"
 )
 
 configure_file (
-   "${PROJECT_SOURCE_DIR}/src/bson/bson-version.h.in"
-   "${PROJECT_BINARY_DIR}/src/bson/bson-version.h"
+   "${PROJECT_SOURCE_DIR}/src/bson/bson/bson-version.h.in"
+   "${PROJECT_BINARY_DIR}/src/bson/bson/bson-version.h"
 )
 
 include_directories ("${PROJECT_BINARY_DIR}/src/bson")
@@ -152,62 +152,66 @@ if (ENABLE_COVERAGE)
 endif ()
 
 set (SOURCES
-   ${PROJECT_SOURCE_DIR}/src/bson/bcon.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-atomic.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-clock.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-context.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-decimal128.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-error.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-fnv.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-iso8601.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-iter.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-json.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-keys.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-md5.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-memory.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-oid.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-reader.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-string.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-timegm.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-utf8.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-value.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-version-functions.c
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-writer.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bcon.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-atomic.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-clock.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-context.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-decimal128.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-error.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-fnv.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-iso8601.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-iter.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-json.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-keys.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-md5.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-memory.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-oid.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-reader.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-string.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-timegm.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-utf8.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-value.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-version-functions.c
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-writer.c
    ${PROJECT_SOURCE_DIR}/src/jsonsl/jsonsl.c
    ${PROJECT_SOURCE_DIR}/../../src/common/common-b64.c
    ${PROJECT_SOURCE_DIR}/../../src/common/common-md5.c
 )
 
 set (HEADERS
-   ${PROJECT_BINARY_DIR}/src/bson/bson-config.h
-   ${PROJECT_BINARY_DIR}/src/bson/bson-version.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bcon.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-atomic.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-clock.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-compat.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-context.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-decimal128.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-endian.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-error.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-iter.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-json.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-keys.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-macros.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-md5.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-memory.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-oid.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-reader.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-string.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-types.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-utf8.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-value.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-version-functions.h
-   ${PROJECT_SOURCE_DIR}/src/bson/bson-writer.h
+   ${PROJECT_BINARY_DIR}/src/bson/bson/bson-config.h
+   ${PROJECT_BINARY_DIR}/src/bson/bson/bson-version.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bcon.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-atomic.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-clock.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-compat.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-context.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-decimal128.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-endian.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-error.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-iter.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-json.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-keys.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-macros.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-md5.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-memory.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-oid.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-reader.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-string.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-types.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-utf8.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-value.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-version-functions.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson/bson-writer.h
 )
 
-add_library (bson_shared SHARED ${SOURCES} ${HEADERS})
+set (HEADERS_FORWARDING
+   ${PROJECT_SOURCE_DIR}/src/bson/forwarding/bson.h
+)
+
+add_library (bson_shared SHARED ${SOURCES} ${HEADERS} ${HEADERS_FORWARDING})
 set (CMAKE_CXX_VISIBILITY_PRESET hidden)
 set_target_properties (bson_shared PROPERTIES COMPILE_DEFINITIONS "BSON_COMPILATION;JSONSL_PARSE_NAN")
 set_target_properties (bson_shared PROPERTIES VERSION 0.0.0 SOVERSION 0)
@@ -239,7 +243,7 @@ if (WIN32)
 endif ()
 
 if (ENABLE_STATIC MATCHES "ON|AUTO")
-   add_library (bson_static STATIC ${SOURCES} ${HEADERS})
+   add_library (bson_static STATIC ${SOURCES} ${HEADERS} ${HEADERS_FORWARDING})
    set_target_properties (bson_static PROPERTIES COMPILE_DEFINITIONS "BSON_COMPILATION;BSON_STATIC;JSONSL_PARSE_NAN")
    set_target_properties (bson_static PROPERTIES VERSION 0.0.0)
    set_target_properties (bson_static PROPERTIES OUTPUT_NAME "bson-static-${BSON_API_VERSION}")
@@ -299,7 +303,11 @@ if (ENABLE_STATIC MATCHES "ON|AUTO")
 endif ()
 install (
    FILES ${HEADERS}
-   DESTINATION ${BSON_HEADER_INSTALL_DIR}
+   DESTINATION "${BSON_HEADER_INSTALL_DIR}/bson"
+)
+install (
+   FILES ${HEADERS_FORWARDING}
+   DESTINATION "${BSON_HEADER_INSTALL_DIR}"
 )
 
 set (LIBBSON_LIBRARIES "")
