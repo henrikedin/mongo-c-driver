@@ -22,7 +22,7 @@
 #error "Only <mongoc.h> or <bson.h> can be included directly."
 #endif
 
-#include <bson.h>
+#include <bson/bson.h>
 
 int
 bson_b64_ntop (uint8_t const *src,

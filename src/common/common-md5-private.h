@@ -23,7 +23,7 @@
 #error "Only <mongoc.h> or <bson.h> can be included directly."
 #endif
 
-#include "bson.h"
+#include "bson/bson.h"
 
 BSON_BEGIN_DECLS
 
