@@ -211,7 +211,7 @@ set (HEADERS_LEGACY
    ${PROJECT_SOURCE_DIR}/src/bson/legacy/bson.h
 )
 
-add_library (bson_shared SHARED ${SOURCES} ${HEADERS})
+add_library (bson_shared SHARED ${SOURCES} ${HEADERS} ${HEADERS_LEGACY})
 set (CMAKE_CXX_VISIBILITY_PRESET hidden)
 set_target_properties (bson_shared PROPERTIES COMPILE_DEFINITIONS "BSON_COMPILATION;JSONSL_PARSE_NAN")
 set_target_properties (bson_shared PROPERTIES VERSION 0.0.0 SOVERSION 0)
@@ -243,7 +243,7 @@ if (WIN32)
 endif ()
 
 if (ENABLE_STATIC MATCHES "ON|AUTO")
-   add_library (bson_static STATIC ${SOURCES} ${HEADERS})
+   add_library (bson_static STATIC ${SOURCES} ${HEADERS} ${HEADERS_LEGACY})
    set_target_properties (bson_static PROPERTIES COMPILE_DEFINITIONS "BSON_COMPILATION;BSON_STATIC;JSONSL_PARSE_NAN")
    set_target_properties (bson_static PROPERTIES VERSION 0.0.0)
    set_target_properties (bson_static PROPERTIES OUTPUT_NAME "bson-static-${BSON_API_VERSION}")
