@@ -500,6 +500,10 @@ set (HEADERS
    ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-ssl.h
 )
 
+set (HEADERS_LEGACY
+   ${PROJECT_SOURCE_DIR}/src/mongoc/legacy/mongoc.h
+)
+
 if (NOT ENABLE_SSL STREQUAL OFF)
    set (SOURCES ${SOURCES}
       ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc/mongoc-crypto.c
@@ -866,9 +870,18 @@ set (MONGOC_HEADER_INSTALL_DIR
    "${CMAKE_INSTALL_INCLUDEDIR}/libmongoc-${MONGOC_API_VERSION}/mongoc"
 )
 
+set (MONGOC_LEGACY_HEADER_INSTALL_DIR
+   "${CMAKE_INSTALL_INCLUDEDIR}/libmongoc-${MONGOC_API_VERSION}"
+)
+
 install (
    FILES ${HEADERS}
    DESTINATION "${MONGOC_HEADER_INSTALL_DIR}"
+)
+
+install (
+   FILES ${HEADERS_LEGACY}
+   DESTINATION "${MONGOC_LEGACY_HEADER_INSTALL_DIR}"
 )
 
 # Define pkg-config files
