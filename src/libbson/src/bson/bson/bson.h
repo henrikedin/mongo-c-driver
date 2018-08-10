@@ -26,7 +26,7 @@
 #include <time.h>
 
 #include "bson/bson-macros.h"
-#include "bson-config.h"
+#include "bson/bson-config.h"
 #include "bson/bson-atomic.h"
 #include "bson/bson-context.h"
 #include "bson/bson-clock.h"

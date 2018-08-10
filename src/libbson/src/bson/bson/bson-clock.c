@@ -23,7 +23,7 @@
 #endif
 
 
-#include "bson-config.h"
+#include "bson/bson-config.h"
 #include "bson/bson-compat.h"
 
 

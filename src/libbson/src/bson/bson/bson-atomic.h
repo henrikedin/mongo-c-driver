@@ -19,7 +19,7 @@
 #define BSON_ATOMIC_H
 
 
-#include "bson-config.h"
+#include "bson/bson-config.h"
 #include "bson/bson-compat.h"
 #include "bson/bson-macros.h"
 

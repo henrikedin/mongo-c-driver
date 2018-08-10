@@ -19,7 +19,7 @@
 #include <stdarg.h>
 
 #include "bson/bson-compat.h"
-#include "bson-config.h"
+#include "bson/bson-config.h"
 #include "bson/bson-error.h"
 #include "bson/bson-memory.h"
 #include "bson/bson-string.h"

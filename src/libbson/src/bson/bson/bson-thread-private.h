@@ -25,7 +25,7 @@
 
 
 #include "bson/bson-compat.h"
-#include "bson-config.h"
+#include "bson/bson-config.h"
 #include "bson/bson-macros.h"
 
 
