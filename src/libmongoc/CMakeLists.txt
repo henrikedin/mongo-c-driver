@@ -501,7 +501,7 @@ set (HEADERS
 )
 
 set (HEADERS_LEGACY
-   ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc.h
+   ${PROJECT_SOURCE_DIR}/src/mongoc/legacy/mongoc.h
 )
 
 if (NOT ENABLE_SSL STREQUAL OFF)
