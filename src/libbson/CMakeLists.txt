@@ -208,7 +208,7 @@ set (HEADERS
 )
 
 set (HEADERS_LEGACY
-   ${PROJECT_SOURCE_DIR}/src/bson/legacy/bson.h
+   ${PROJECT_SOURCE_DIR}/src/bson/bson.h
 )
 
 add_library (bson_shared SHARED ${SOURCES} ${HEADERS} ${HEADERS_LEGACY})
