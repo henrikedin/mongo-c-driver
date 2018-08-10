@@ -3,8 +3,8 @@
 
 #include <bson/bson.h>
 
-#include "mongoc-client-session.h"
-#include "mongoc-bulk-operation-private.h"
+#include "mongoc/mongoc-client-session.h"
+#include "mongoc/mongoc-bulk-operation-private.h"
 
 /**************************************************
  *

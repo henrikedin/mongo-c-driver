@@ -16,7 +16,7 @@
 
 
 #if !defined(MONGOC_COMPILATION)
-#error "Only <mongoc.h> can be included directly."
+#error "Only <mongoc/mongoc.h> can be included directly."
 #endif
 
 
@@ -25,7 +25,7 @@
 
 
 #include <bson/bson.h>
-#include "mongoc-crypto-private.h"
+#include "mongoc/mongoc-crypto-private.h"
 
 
 BSON_BEGIN_DECLS

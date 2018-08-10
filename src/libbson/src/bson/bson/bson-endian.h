@@ -20,7 +20,7 @@
 
 
 #if !defined(BSON_INSIDE) && !defined(BSON_COMPILATION)
-#error "Only <bson.h> can be included directly."
+#error "Only <bson/bson.h> can be included directly."
 #endif
 
 
@@ -29,8 +29,8 @@
 #endif
 
 #include "bson-config.h"
-#include "bson-macros.h"
-#include "bson-compat.h"
+#include "bson/bson-macros.h"
+#include "bson/bson-compat.h"
 
 
 BSON_BEGIN_DECLS

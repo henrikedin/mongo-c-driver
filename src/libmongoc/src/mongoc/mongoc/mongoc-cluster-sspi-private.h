@@ -18,11 +18,11 @@
 #define MONGOC_CLUSTER_SSPI_PRIVATE_H
 
 #if !defined(MONGOC_COMPILATION)
-#error "Only <mongoc.h> can be included directly."
+#error "Only <mongoc/mongoc.h> can be included directly."
 #endif
 
-#include "mongoc-config.h"
-#include "mongoc-cluster-private.h"
+#include "mongoc/mongoc-config.h"
+#include "mongoc/mongoc-cluster-private.h"
 #include <bson/bson.h>
 
 bool
