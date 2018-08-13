@@ -243,7 +243,7 @@ if (WIN32)
 endif ()
 
 if (ENABLE_STATIC MATCHES "ON|AUTO")
-   add_library (bson_static STATIC ${SOURCES} ${HEADERS} ${HEADERS_LEGACY})
+   add_library (bson_static STATIC ${SOURCES} ${HEADERS} ${HEADERS_FORWARDING})
    set_target_properties (bson_static PROPERTIES COMPILE_DEFINITIONS "BSON_COMPILATION;BSON_STATIC;JSONSL_PARSE_NAN")
    set_target_properties (bson_static PROPERTIES VERSION 0.0.0)
    set_target_properties (bson_static PROPERTIES OUTPUT_NAME "bson-static-${BSON_API_VERSION}")
