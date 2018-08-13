@@ -43,7 +43,7 @@
 #include "bson/bson-types.h"
 #include "bson/bson-utf8.h"
 #include "bson/bson-value.h"
-#include "bson-version.h"
+#include "bson/bson-version.h"
 #include "bson/bson-version-functions.h"
 #include "bson/bson-writer.h"
 #include "bson/bcon.h"
