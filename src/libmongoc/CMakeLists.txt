@@ -121,6 +121,7 @@ if (NOT ENABLE_SSL STREQUAL OFF)
 
    if (ENABLE_SSL STREQUAL DARWIN OR (APPLE AND ENABLE_SSL STREQUAL "AUTO"))
       if (APPLE)
+         find_library(SSL_LIBRARIES NAMES CoreFoundation Security)
          set (SECURE_TRANSPORT 1)
       else ()
          message (FATAL_ERROR "ENABLE_SSL=DARWIN only supported on Mac OS X")
@@ -543,7 +544,7 @@ if (NOT ENABLE_SSL STREQUAL OFF)
          ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-stream-tls-secure-transport.c
          ${PROJECT_SOURCE_DIR}/src/mongoc/mongoc-secure-transport.c
       )
-      set (SSL_LIBRARIES "-framework CoreFoundation -framework Security")
+      #set (SSL_LIBRARIES "-framework CoreFoundation -framework Security")
    elseif (SECURE_CHANNEL)
       message (STATUS "Compiling against Secure Channel")
       set (SOURCES ${SOURCES}
